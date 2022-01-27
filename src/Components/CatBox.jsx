@@ -12,9 +12,7 @@ export const CatBox = () => {
     setCat(dataArray[0]);
   };
 
-  useEffect(() => {
-    fetchCat();
-  }, []);
+  useEffect(() => {fetchCat();}, []);
   
   return (
     <div className="catbox">
