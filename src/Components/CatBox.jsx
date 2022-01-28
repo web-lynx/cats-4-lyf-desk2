@@ -16,11 +16,13 @@ export const CatBox = () => {
   
   return (
     <div className="catbox">
-      <h3 className="catbox-title">{catNames.random()}</h3>
-      <img className="catbox-image" src={cat.url} alt="a cat" />
-      <p className="cat-price">£{catPrice}</p>
-      <button className="basket-button">Add to basket</button>
-      <button className="remove-basket-button">Remove from basket</button>
+      <div>
+        <h3 className="catbox-title">{catNames.random()}</h3>
+        <img className="catbox-image" src={cat.url} alt="a cat" />
+        <p className="cat-price">£{catPrice}</p>
+        <button className="basket-button">Add to basket</button>
+        <button className="remove-basket-button">Remove from basket</button>
+      </div>
     </div>
   );
 };
