@@ -1,3 +1,8 @@
  * {
    font-family: sans-serif;
  }
+
+ .catbox-image {
+   height: 200px;
+   width: 300px;
+ }
