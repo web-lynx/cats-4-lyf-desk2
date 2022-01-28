@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import Cart from "./Cart";
+import CatCart from "./Components/CatCart";
 import { CatContainer } from './Components/CatContainer';
 import { CartProvider } from 'react-use-cart';
 
@@ -13,7 +13,7 @@ const App = () => {
         <div className='row justify-content-center'>
           <CartProvider>
           <CatContainer />
-          <Cart/>
+          <CatCart/>
           </CartProvider>
         </div> 
       </section>
