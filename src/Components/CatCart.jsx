@@ -2,7 +2,7 @@ import React from 'react';
 import { useCart } from "react-use-cart"
 import CatBox from './CatBox';
 
-const Cart = () => {
+const CatCart = () => {
     const { 
         isEmpty,
         totalUniqueItems,
@@ -52,4 +52,4 @@ const Cart = () => {
     );
 };
 
-export default Cart;
+export default CatCart;
