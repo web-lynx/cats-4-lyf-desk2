@@ -14,11 +14,11 @@ const CatCart = () => {
     } = useCart();
     if (isEmpty) return <h1 className="text-center">Your Cart is Empty</h1>
     return (
-        <section className='py-4 container'>
-        <div className='row justify-content-center'>
-            <div className='col-12'>
+        <section>
+        <div>
+            <div>
                 <h5>Cart ({totalUniqueItems}) Total Items: ({totalItems})</h5>
-                <table className='table table-light table-hover m-0'>
+                <table>
                     <tbody>
                         {CatBox.map((item, index) => {
                             return(

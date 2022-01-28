@@ -8,9 +8,9 @@ const App = () => {
   
   return (
     <div className="App">
-      <h1 className='text-center mt-3'>Cats 4 Lyf - Your Cat Buying Solution</h1>
-      <section className='py-4 container'>
-        <div className='row justify-content-center'>
+      <h1>Cats 4 Lyf - Your Cat Buying Solution</h1>
+      <section>
+        <div>
           <CartProvider>
           <CatContainer />
           <CatCart/>

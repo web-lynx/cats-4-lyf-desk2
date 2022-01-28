@@ -1,11 +1,8 @@
-import React, { useState, useEffect } from 'react';
-import { useCart } from 'react-use-cart';
+import { useState, useEffect } from 'react';
 
-export const CatBox = (props) => {
+export const CatBox = () => {
   const [cat, setCat] = useState({});
-  const catPrice = (Math.random() * 10).toFixed(2)
   const catNames = require('cat-names');
-  const addItem = useCart();
 
   const fetchCat = async () => {
     const response = await fetch("https://api.thecatapi.com/v1/images/search?limit=1");
@@ -14,18 +11,18 @@ export const CatBox = (props) => {
     setCat(dataArray[0]);
   };
 
-  useEffect(() => {fetchCat();}, []);
+  useEffect(() => {fetchCat();}, );
   
-  return (
-    <div className="catbox col-11 col-md-6 col-lg-3 mx-0 mb-4">
-      <div class="card p-0 overflow-hidden h-100 shadow">
-      <img className="catbox-image" class="card-img-top img-fluid" src={cat.url} alt="a cat" />
-      <h5 className="catbox-title">{catNames.random()}</h5>
-      <h5 className="cat-price">£{catPrice}</h5>
-      <button class="btn btn-success" onClick={() => addItem(props)}>Add to Cart</button>
-      </div>
-    </div>
-  );
+  let catArray = [];
+  for (var i = 0; i < 9; i ++) {
+  fetchCat()
+  catArray[i] = {
+    id: "cat" + i,
+    name: catNames.random(),
+    price: (Math.random() * 10).toFixed(2),
+    image: cat[0].image
+ };
+};
 };
 
 export default CatBox
