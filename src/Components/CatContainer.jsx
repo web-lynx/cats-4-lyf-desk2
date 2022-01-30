@@ -4,7 +4,6 @@ import { CatBox } from './CatBox';
 //Temporary CatContainer 
 
 export const CatContainer = () => {
-  
   return (
     <div>
       <CatBox  />
@@ -19,3 +18,5 @@ export const CatContainer = () => {
     </div>
   );
 };
+
+export default CatContainer
