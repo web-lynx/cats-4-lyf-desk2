@@ -1,13 +1,13 @@
 import React from 'react';
 import './App.css';
-import { CatContainer } from './Components/CatContainer';
+import CatModal from './Components/CatModal';
 
 const App = () => {
   
   return (
     <div className="App">
       <h1>Cats 4 Lyf - Your Cat Buying Solution</h1>
-      <CatContainer />
+      <CatModal />
     </div>
   );
 }
