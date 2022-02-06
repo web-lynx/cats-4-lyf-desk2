@@ -7,7 +7,9 @@ https://adoring-lichterman-2a2d06.netlify.app/
 ## Contributors:
 
 Daniel Boateng
+
 Ian Mukoma
+
 Alexander Wayland
 
 ## Local use:
