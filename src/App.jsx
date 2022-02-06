@@ -10,7 +10,7 @@ const App = () => {
 
 	const fetchCat = async () => {
 		const response = await fetch(
-			'https://api.thecatapi.com/v1/images/search?limit=10',
+			'https://api.thecatapi.com/v1/images/search?limit=9',
 		);
 		const dataArray = await response.json();
 		dataArray.map((catData) => {
