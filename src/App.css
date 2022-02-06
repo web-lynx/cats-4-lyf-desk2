@@ -36,6 +36,7 @@ h2 {
 .catbox {
   display: flex;
   justify-content: center;
+  flex-basis: 30%;
 }
 
 .catbox img {
