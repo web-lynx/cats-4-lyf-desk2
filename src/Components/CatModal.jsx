@@ -1,30 +1,33 @@
-import React,{ useState } from 'react' 
+import React, { useState } from 'react';
 import Modal from 'react-modal';
-import CatContainer from './CatContainer';
 
-function CatModal (){
+function CatModal({ basketItems }) {
+	const [modalIsOpen, setModalIsOpen] = useState(false);
 
-    const [modalIsOpen,setModalIsOpen] = useState(false);
+	const setModalIsOpenToTrue = () => {
+		setModalIsOpen(true);
+	};
 
-    const setModalIsOpenToTrue =()=>{
-        setModalIsOpen(true)
-    }
+	const setModalIsOpenToFalse = () => {
+		setModalIsOpen(false);
+	};
 
-    const setModalIsOpenToFalse =()=>{
-        setModalIsOpen(false)
-    }
+	return (
+		<div className="CatModal">
+			<button onClick={setModalIsOpenToTrue}>Basket</button>
 
-    return(
-        <div className='CatModal'>
-            <button onClick={setModalIsOpenToTrue}>Click to Open Modal</button>
-
-            <Modal isOpen={modalIsOpen}>
-                <button onClick={setModalIsOpenToFalse}>x</button>
-                <CatContainer/>
-
-            </Modal>
-        </div>
-    )
+			<Modal isOpen={modalIsOpen}>
+				<button onClick={setModalIsOpenToFalse}>x</button>
+				{basketItems.map(({ catName, image, price }) => (
+					<div>
+						<h3>{catName}</h3>
+						<img src={image} alt="a cat" />
+						<p>£{price}</p>
+					</div>
+				))}
+			</Modal>
+		</div>
+	);
 }
 
 export default CatModal;

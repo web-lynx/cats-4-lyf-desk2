@@ -1,38 +1,43 @@
- * {
-   font-family: sans-serif;
- }
-
- .App {
-   text-decoration: cornsilk;
-   text-align: center;
-   background-color: rgb(94, 84, 160);
-   padding: 20px 10px 1250px 80px;
- }
-
- .catbox-image {
-   height: 250px;
-   width: 350px;
- }
-
- .catbox {
-  border: 3px solid black;
-  background-color: rgb(148, 185, 185);
-  float: left;
-  justify-content: space-evenly;
-  list-style:none;
-  margin: 50;
-  padding: 10px 0px 0px 10px
-  
+.App {
+	max-width: 80%;
+	margin: 0 auto;
+	text-align: center;
+}
+.img-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
 }
 
-.basket-button {
-  background-color: rgb(110, 189, 107);
+.catbox {
+	display: flex;
+	justify-content: center;
 }
 
-.remove-basket-button {
-  background-color:rgb(212, 151, 132) ;
+.catbox img {
+	height: 250px;
+	width: 250px;
+	object-fit: cover;
+	margin-left: 10px;
+	border-radius: 10px;
 }
 
-.flex-nav  {
-  flex-grow: 3;
+.catbox button {
+	border: none;
+	background-color: teal;
+	color: white;
+	margin-left: 5px;
+	padding: 10px 10px;
+	cursor: pointer;
+	border-radius: 5px;
+}
+
+.CatModal button {
+	border: none;
+	background-color: teal;
+	color: white;
+	margin-left: 5px;
+	padding: 10px 10px;
+	cursor: pointer;
+	border-radius: 5px;
 }
